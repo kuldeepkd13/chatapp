@@ -8,6 +8,12 @@ const app = express()
 require("dotenv").config()
 app.use(express.json())
 app.use(cors())
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    next();
+  });
 const { userJoin, getRoomUsers, getCurrentUser, userLeave } = require("./utils/user")
 const formateMessage = require("./utils/messages")
 const server = http.createServer(app)
