@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/style/login.css">
+</head>
+<body>
+    <div id="main">
+        <div class="brand">
+            <div class="logo">
+                <img style="width: 80px; " src="https://img.freepik.com/premium-vector/chat-logo-design_93835-108.jpg?w=740" alt="brand">
+            </div>
+            <div class="brandname">
+                <h2>Chat App</h2>
+            </div>
+        </div>
+        <form action="chat.html">
+            <p style="text-align: right;">Don't have an account? <a href="/public/signup.html">Sign up</a></p>
+            <h1>Log in</h1>
+            <input type="hidden" id="name" name="username">
+            <input type="hidden" id="room" name="room">
+            <label for="email">Email address</label>
+            <input type="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <input type="submit" value="Log in">
+        </form>
+        <div class="response">
+            <!-- This is where the response message will be displayed -->
+        </div>
+        <div id="lowerdiv">
+            <p style="color: rgba(119, 177, 243, 0.925); cursor: pointer;">Forgot email or password?</p>
+        </div>
+    </div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/public/src/login.js"></script>
+</html>
